@@ -1,0 +1,660 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00695c;
+    color: white;
+    padding: 20px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Hero Image */
+.hero-image {
+    width: 100%;
+    height: 500px;
+    background-image: url('Prueba22.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    margin-top: 80px;
+}
+
+/* Sección Quiénes Somos */
+.quienes-somos {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.quienes-somos h2 {
+    font-size: 36px;
+    color: #00695c;
+}
+
+.quienes-somos p {
+    font-size: 20px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Comparación de Precios */
+.comparacion-precios {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.comparacion-precios h2 {
+    font-size: 32px;
+    color: #004d40;
+    margin-bottom: 40px;
+}
+
+.comparacion-precios .tabla-precios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.comparacion-precios .farmacia {
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.comparacion-precios .farmacia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.comparacion-precios .farmacia h3 {
+    font-size: 24px;
+    color: #00695c;
+    margin-bottom: 15px;
+}
+
+.comparacion-precios .farmacia p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #004d40;
+    color: white;
+    padding: 40px 30px;
+    margin-top: 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-about h3, .footer-links h3, .footer-social h3 {
+    color: #ffcc00;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #ffcc00;
+}
+
+.footer-social a {
+    color: #e0e0e0;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ffcc00;
+}
+
+/* Sección "Nuestros Valores" */
+.nuestros-valores {
+    padding: 80px 20px;
+    background-color: #fafafa;
+}
+
+.valores-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.valores-texto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.valores-texto h2 {
+    font-size: 32px;
+    color: #00695c;
+    margin-bottom: 20px;
+}
+
+.valores-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.valores-imagen {
+    flex: 1;
+    max-width: 500px;
+}
+
+.valores-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.valores-imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Sección "Análisis del Mercado de Precios" */
+.analisis-mercado {
+    padding: 80px 20px;
+    background-color: #fafafa; /* Fondo claro */
+}
+
+.mercado-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mercado-texto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.mercado-texto h2 {
+    font-size: 32px;
+    color: #00695c; /* Color que mencionaste */
+    margin-bottom: 20px;
+}
+
+.mercado-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.mercado-imagen {
+    flex: 1;
+    max-width: 500px;
+}
+
+.mercado-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.mercado-imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Sección "Análisis del Mercado de Precios" */
+.analisis-mercado {
+    padding: 80px 20px;
+    background-color: #fafafa; /* Fondo claro */
+}
+
+.mercado-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.mercado-texto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.mercado-texto h2 {
+    font-size: 32px;
+    color: #00695c; /* Color que mencionaste */
+    margin-bottom: 20px;
+}
+
+.mercado-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.mercado-imagen {
+    flex: 1;
+    max-width: 500px;
+}
+
+.mercado-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.mercado-imagen img:hover {
+    transform: scale(1.05);
+}
+
+/* Sección "Atención al Cliente y Soporte" */
+.atencion-soporte {
+    padding: 80px 20px;
+    background-color: #fafafa; /* Fondo claro */
+}
+
+.soporte-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.soporte-texto {
+    flex: 1;
+    max-width: 600px;
+}
+
+.soporte-texto h2 {
+    font-size: 32px;
+    color: #00695c; /* Color que mencionaste */
+    margin-bottom: 20px;
+}
+
+.soporte-texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.soporte-imagen {
+    flex: 1;
+    max-width: 500px;
+}
+
+.soporte-imagen img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.soporte-imagen img:hover {
+    transform: scale(1.05);
+}
+
+
+.beneficios {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.contenedor-beneficio {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px;
+  width: 300px;
+  display: inline-block;
+}
+
+.contenedor-beneficio img {
+  max-width: 100px;
+  margin-bottom: 20px;
+}
+
+.contenedor-beneficio h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contenedor-beneficio p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+/* Sección "Encuentra las Mejores Ubicaciones" */
+.mejores-ubicaciones {
+    padding: 100px 20px;
+    background: linear-gradient(to right, #e3f2fd, #fafafa); /* Gradiente moderno */
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.ubicaciones-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.ubicaciones-texto {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.ubicaciones-texto h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1e88e5; /* Azul moderno */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.ubicaciones-texto p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #424242; /* Gris oscuro */
+    margin-bottom: 20px;
+}
+
+.ubicaciones-imagen {
+    flex: 1;
+    max-width: 500px;
+}
+
+.ubicaciones-imagen img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ubicaciones-imagen img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* estilos.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.oferta {
+    color: green;
+    font-weight: bold;
+}
+.producto {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.producto img {
+  max-width: 100%;
+}
+
+.producto:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ALINIACION DE TEXTOS */
+.mercado-content {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+.mercado-texto {
+  text-align: justify; /* Justifica el texto para un aspecto más profesional */
+}
+
+.mercado-imagen {
+  max-width: 50%; /* Ajusta el ancho máximo de la imagen */
+}
+
+
+.valores-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.valores-texto {
+  text-align: justify;
+}
+
+.valores-imagen {
+  max-width: 50%;
+}
+
+.soporte-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.soporte-texto {
+  text-align: justify;
+}
+
+.soporte-imagen {
+  max-width: 50%;
+}
+
+
+.ubicaciones-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ubicaciones-texto {
+  text-align: justify;
+}
+
+.ubicaciones-imagen {
+  max-width: 50%;
+}
+
+
+/* estilos.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.contacto {
+  padding: 40px;
+  text-align: center;
+}
+
+.contacto form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.contacto label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contacto input, .contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contacto button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-us {
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2; /* Light gray background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-us img {
+    max-width: 80%;
+    border-radius: 10px; /* Rounded corners for a softer look */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.contact-us h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; /* Dark text color */
+}
+
+.contact-us p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #666; /* Lighter text color */
+}
+
+.contact-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-us li {
+    margin-bottom: 10px;
+}
